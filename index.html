@@ -215,14 +215,14 @@
             	<img id="left-image" alt="" height="300" width="500">
             </div>
             <div class="image-wrapper">
-            	<img id="center-image"alt="" height="300" width="500">
+            	<img id="center-image" alt="" height="300" width="500">
             </div>
             <div class="image-wrapper tablet-and-bigger">
             	<img id="right-image" alt="" height="300" width="500">
             </div>
         </div>
         <div class="logo-wrapper">
-			<img src="img/logo-compressed.jpg" alt="" height="110" width="137">
+			<img src="img/logo-opt.jpg" alt="" height="110" width="137">
 			<div class="social-links">
 			<a href="https://www.facebook.com/MonikaNidhii/"><i class="fa fa-facebook"></i></a>
 			<a href="https://www.instagram.com/monikanidhii/"><i class="fa fa-instagram"></i></a>
@@ -241,25 +241,30 @@
     		function fadeIn(id) {
     			document.getElementById(id).classList.add('visible');
     		}
+    		var width = window.innerWidth;
     		var imgs = [];
     		imgs.push(new Image());
     		imgs.push(new Image());
     		imgs.push(new Image());
-    		imgs[0].onload = function() {
-    			document.getElementById('left-image').src = imgs[0].src;
-    			fadeIn('left-image');
+    		if(width > 1023) {
+	    		imgs[0].onload = function() {
+	    			document.getElementById('left-image').src = imgs[0].src;
+	    			fadeIn('left-image');
+	    		}
+	    		imgs[0].src = 'img/21-opt.jpg';
     		}
-    		imgs[0].src = 'img/21.jpg';
     		imgs[1].onload = function() {
     			document.getElementById('center-image').src = imgs[1].src;
     			fadeIn('center-image');
     		}
-    		imgs[1].src = 'img/11.jpg';
-    		imgs[2].onload = function() {
-    			document.getElementById('right-image').src = imgs[2].src;
-    			fadeIn('right-image');
+    		imgs[1].src = 'img/11-opt.jpg';
+    		if (width > 700) {
+	    		imgs[2].onload = function() {
+	    			document.getElementById('right-image').src = imgs[2].src;
+	    			fadeIn('right-image');
+	    		}
+	    		imgs[2].src = 'img/31-opt.jpg';
     		}
-    		imgs[2].src = 'img/31.jpg';
     	// }
     </script>
 </body>
