@@ -84,7 +84,7 @@ html,body {
 	color: rgba(0,0,0,0.8);
 }
 
-.social-links .fa {
+.social-links .fa:first-child {
 	margin-right: 0.2rem;
 }
 
@@ -139,7 +139,7 @@ html,body {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
-	.mobile-social-links .fa:first-child {
+	.mobile-social-links .fa-facebook {
 		margin-right: 1rem;
 	}
 }
