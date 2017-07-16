@@ -144,6 +144,9 @@
 			margin-right: 0.2rem;
 		}
 
+		.hidden {
+			opacity: 0;
+		}
 
 		.image-wrapper img {
 			width: 300px;
@@ -221,18 +224,18 @@
             	<img id="right-image" alt="" height="300" width="500">
             </div>
         </div>
-        <div class="logo-wrapper">
+        <div class="logo-wrapper hidden">
 			<img src="img/logo-opt.jpg" alt="" height="110" width="137">
 			<div class="social-links">
 			<a href="https://www.facebook.com/MonikaNidhii/"><i class="fa fa-facebook"></i></a>
 			<a href="https://www.instagram.com/monikanidhii/"><i class="fa fa-instagram"></i></a>
 			</div>
     	</div>
-    	 <div class="mobile-social-links">
+    	 <div class="mobile-social-links hidden">
 			<a href="https://www.facebook.com/MonikaNidhii/"><i class="fa fa-facebook"></i></a>
 			<a href="https://www.instagram.com/monikanidhii/"><i class="fa fa-instagram"></i></a>
 		</div>
-        <div class='coming-soon-text'>
+        <div class='coming-soon-text hidden'>
 				Website being handcrafted with love
         </div>
     </div>
@@ -266,6 +269,11 @@
 	    		imgs[2].src = 'img/31-opt.jpg';
     		}
     	// }
+    	window.onload = function() {    		
+    		document.querySelector('.mobile-social-links').classList.remove('hidden')
+    		document.querySelector('.logo-wrapper').classList.remove('hidden')
+    		document.querySelector('.coming-soon-text').classList.remove('hidden')
+    	}
     </script>
 </body>
 
