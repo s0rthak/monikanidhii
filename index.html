@@ -171,6 +171,25 @@
 			font-size: 1.2rem;
 			color: rgb(92, 76, 88);
 		}
+		.contact-details {
+			margin-top: 1rem;
+			font-family: 'Trajan Pro', sans-serif;
+			width: calc(900px + 4rem);
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 1rem;
+			line-height: 1.5;
+			display: flex;
+			justify-content: space-between;
+			
+		}
+		.contact-details  .contact-section {
+			width: 300px;
+			/*margin-left: auto;*/
+		}
+		.contact-details .contact-section:last-child {
+			text-align: right;
+		}
 
 		@media (max-width: 1023px) {
 			.wrapper {
@@ -181,6 +200,9 @@
 			}
 			.computer-only {
 				display: none;
+			}
+			.contact-details {
+				width: calc(600px + 2rem);
 			}
 		}
 
@@ -205,6 +227,17 @@
 			}
 			.mobile-social-links .fa-facebook {
 				margin-right: 1rem;
+			}
+			.contact-details {
+				flex-direction: column;
+				align-items: center;
+				width: 300px;
+			}
+			.contact-details .contact-section {
+				text-align: center !important;
+			}
+			.contact-details .contact-section:last-child {
+				margin-bottom: 2rem;
 			}
 		}
 
@@ -237,6 +270,12 @@
 		</div>
         <div class='coming-soon-text hidden'>
 				Website being handcrafted with love
+        </div>
+        <div class="contact-details hidden">
+       		 <p class="contact-section">
+        		MonikaNidhii<br>Ground Floor, 5J, Shahpur Jat, Siri Fort Institutional Area,<br> Siri Fort, New Delhi, Delhi 110049
+        	</p>
+        	<p class="contact-section">Reach us at<br>088821 31415<br>info@monikanidhii.com</p>
         </div>
     </div>
     <script>
@@ -273,6 +312,7 @@
     		document.querySelector('.mobile-social-links').classList.remove('hidden')
     		document.querySelector('.logo-wrapper').classList.remove('hidden')
     		document.querySelector('.coming-soon-text').classList.remove('hidden')
+    		document.querySelector('.contact-details').classList.remove('hidden')
     	}
     </script>
 </body>
