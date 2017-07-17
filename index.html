@@ -125,6 +125,9 @@
 			top: 0;
 			font-size: 2.5rem;
 		}
+		.separator {
+			display: none;
+		}
 
 		.mobile-social-links {
 			font-size: 2.5rem;
@@ -241,6 +244,13 @@
 			.contact-details .contact-section:last-child {
 				margin-bottom: 2rem;
 			}
+			.separator {
+				display: block;
+				height: 1px;
+				width: 25px;
+				background-color: rgb(92, 76, 88);
+			}
+
 		}
 
     </style>	
@@ -277,6 +287,7 @@
        		 <p class="contact-section">
         		MonikaNidhii<br>Ground Floor, 5J, Shahpur Jat, Siri Fort Institutional Area,<br> Siri Fort, New Delhi, Delhi 110049
         	</p>
+        	<div class="separator"></div>
         	<p class="contact-section">Reach us at<br>088821 31415<br>info@monikanidhii.com</p>
         </div>
     </div>
@@ -295,19 +306,19 @@
 	    			document.getElementById('left-image').src = imgs[0].src;
 	    			fadeIn('left-image');
 	    		}
-	    		imgs[0].src = 'img/21-opt.jpg';
+	    		imgs[0].src = 'img/21-opt-dpr.jpg';
     		}
     		imgs[1].onload = function() {
     			document.getElementById('center-image').src = imgs[1].src;
     			fadeIn('center-image');
     		}
-    		imgs[1].src = 'img/11-opt.jpg';
+    		imgs[1].src = 'img/11-opt-dpr.jpg';
     		if (width > 700) {
 	    		imgs[2].onload = function() {
 	    			document.getElementById('right-image').src = imgs[2].src;
 	    			fadeIn('right-image');
 	    		}
-	    		imgs[2].src = 'img/31-opt.jpg';
+	    		imgs[2].src = 'img/31-opt-dpr.jpg';
     		}
     	// }
     	window.onload = function() {    		
